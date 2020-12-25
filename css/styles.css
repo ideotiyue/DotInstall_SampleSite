@@ -1,0 +1,174 @@
+/* テーマカラーの指定 */
+:root {
+  --my-hue: 30;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+}
+
+header {
+  background: hsl(var(--my-hue), 35%, 55%);
+  color: white;
+  text-align: center;
+  padding-top: 34px;
+}
+
+header h1,
+header p {
+  margin:0
+}
+
+header img {
+  width: 280px;
+  /* 画像はインライン要素。
+  ベースラインを基準に配置されてしまうため、下揃えに指定 */
+  vertical-align: bottom;
+}
+
+.btn {
+  text-decoration: none;
+  background: white;
+  color: hsl(var(--my-hue), 35%, 55%);
+  display: block;
+  width: 140px;
+  line-height: 44px;
+  margin: 40px auto 48px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.features img {
+  width: 100%;
+}
+
+.features > h1 {
+  text-align: center;
+  padding: 64px 0;
+  font-weight: normal;
+}
+
+.features .container {
+  margin: 0 32px;
+}
+
+.features p {
+  line-height: 1.8;
+}
+
+.features section {
+  padding-bottom: 64px;
+}
+
+.members {
+  background: hsl(var(--my-hue), 80%, 95%);
+}
+
+.members > h1 {
+  text-align: center;
+  padding: 64px 0;
+  font-weight: normal;
+}
+
+.members ul {
+  list-style: none;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.members img {
+  width: 160px;
+  border-radius: 50%;
+}
+
+.members h2 {
+  font-size: 20px;
+}
+
+.members li {
+  padding-bottom: 64px;
+}
+
+.call-to-action {
+  background: hsl(var(--my-hue), 35%, 55%);
+  color: white;
+  text-align: center;
+  padding: 64px 0px;
+}
+
+.call-to-action h1 {
+  font-weight: normal;
+}
+
+.call-to-action .btn {
+  margin: 0 auto;
+}
+
+footer {
+  padding: 64px 0;
+  background: hsl(var(--my-hue), 80%, 30%);
+  color: #f2f2f3;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  header .container {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  header .info {
+    width: 60%;
+    align-self: center;
+  }
+
+  header .pic {
+    width: 40%;
+  }
+
+  .features .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .features section {
+    display: flex;
+    /* .infoの32pxの余白を画像側との間に入れる */
+    justify-content: space-between;
+  }
+
+  .features section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .features .info {
+    /* .info の幅を 32px 分余白にまわす */
+    width: calc(50% - 32px);
+    align-self: center;
+  }
+
+  .features .pic {
+    width: 50%;
+  }
+
+  .members ul {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .members li {
+    width: 250px;
+  }
+}
